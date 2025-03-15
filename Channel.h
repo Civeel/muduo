@@ -1,0 +1,92 @@
+#pragma once
+
+#include "noncopyable.h"
+#include "Timestamp.h"
+
+#include <functional>
+#include <memory>
+
+class EventLoop;
+
+/* 
+理解为通道，在muduo中封装了sockfd和其感兴趣的event，如EPOLLIN OR EPOLLOUT
+还绑定了poller返回的具体事件
+
+一个线程有一个EventLoop，一个EventLoop有一个Poller，一个Poller监听许多Channel
+
+EventLoop中包含Channel和Poller
+Channel中包含有fd、感兴趣的事件和最终发生的事件
+但这些事件在Poller中注册，并告知Channel调用对应的回调函数
+*/
+class Channel : noncopyable {
+public:
+    using EventCallback = std::function<void()>;
+    using ReadEventCallback = std::function<void(Timestamp)>;
+
+    Channel(EventLoop *loop, int fd);
+    ~Channel();
+
+    //fd得到Poller通知后，处理事件
+    void handleEvent(Timestamp receiveTime);
+
+    //设置回调函数对象
+    void setReadCallback(ReadEventCallback cb) {readCallback_ = std::move(cb);}
+    void setWriteCallback(EventCallback cb) {writeCallback_ = std::move(cb);}
+    void setCloseCallback(EventCallback cb) {closeCallback_ = std::move(cb);}
+    void setErrorCallback(EventCallback cb) {errorCallback_ = std::move(cb);}
+
+    //防止Channel被手动remove掉后，Channel还在执行以上的回调操作
+    void tie(const std::shared_ptr<void>&);
+
+    int fd() const {return fd_;}
+    int events() const {return events_;}
+    //Poller监听事件后，告知Channel所发生的事件
+    int set_revents(int revt) {revents_ = revt;}
+    bool isNoneEvent() const {return events_ == kNoneEvent;}
+
+    //设置fd相应的事件状态
+    void enableReading() {events_ |= kReadEvent; update();} //update()通知poller将事件添加到epoll
+    void disableReading() {events_ &= ~kReadEvent; update();}
+    void enableWriting() {events_ |= kWriteEvent; update();}
+    void disableWriting() {events_ &= ~kWriteEvent; update();}
+    void disableAll() {events_ |= kNoneEvent; update();}
+
+    //返回fd当前的事件状态
+    bool isNoneEvent() const {return events_ == kNoneEvent;}
+    bool isWriting() const {return events_ & kWriteEvent;}
+    bool isReading() const {return events_ & kReadEvent;}
+
+    int index() {return index_;}
+    void set_index(int idx) {index_ = idx;}
+
+    //当前Channel属于哪个EventLoop, one loop per thread
+    EventLoop* ownerLoop() {return loop_;}
+    void remove();
+
+private:
+    void update();
+    void handleEventWithGuard(Timestamp receiveTime);
+
+    static const int kNoneEvent;
+    static const int kReadEvent;
+    static const int kWriteEvent;
+
+    //事件循环
+    EventLoop *loop_;
+    //fd poller监听的对象，通过epoll_ctl添加 修改 删除
+    const int fd_;
+    //注册fd感兴趣的事件
+    int events_;
+    //poller返回的具体发生的事件
+    int revents_;
+    int index_;
+
+    std::weak_ptr<void> tie_;
+    bool tied_;
+
+    //因为channel通道里能够获知fd最终发生的具体事件revents，所以负责调用具体事件的回调操作
+    ReadEventCallback readCallback_;
+    EventCallback writeCallback_;
+    EventCallback closeCallback_;
+    EventCallback errorCallback_;
+};

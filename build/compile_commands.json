@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/home/skeleton/桌面/muduo/build",
+  "command": "/usr/bin/c++ -Dmymuduo_EXPORTS   -g -std=c++11 -g -fPIC -o CMakeFiles/mymuduo.dir/Logger.cc.o -c /home/skeleton/桌面/muduo/Logger.cc",
+  "file": "/home/skeleton/桌面/muduo/Logger.cc",
+  "output": "CMakeFiles/mymuduo.dir/Logger.cc.o"
+},
+{
+  "directory": "/home/skeleton/桌面/muduo/build",
+  "command": "/usr/bin/c++ -Dmymuduo_EXPORTS   -g -std=c++11 -g -fPIC -o CMakeFiles/mymuduo.dir/Timestamp.cc.o -c /home/skeleton/桌面/muduo/Timestamp.cc",
+  "file": "/home/skeleton/桌面/muduo/Timestamp.cc",
+  "output": "CMakeFiles/mymuduo.dir/Timestamp.cc.o"
+},
+{
+  "directory": "/home/skeleton/桌面/muduo/build",
+  "command": "/usr/bin/c++ -Dmymuduo_EXPORTS   -g -std=c++11 -g -fPIC -o CMakeFiles/mymuduo.dir/muduo_server.cpp.o -c /home/skeleton/桌面/muduo/muduo_server.cpp",
+  "file": "/home/skeleton/桌面/muduo/muduo_server.cpp",
+  "output": "CMakeFiles/mymuduo.dir/muduo_server.cpp.o"
+}
+]
