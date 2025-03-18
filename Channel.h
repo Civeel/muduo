@@ -41,8 +41,7 @@ public:
     int fd() const {return fd_;}
     int events() const {return events_;}
     //Poller监听事件后，告知Channel所发生的事件
-    int set_revents(int revt) {revents_ = revt;}
-    bool isNoneEvent() const {return events_ == kNoneEvent;}
+    void set_revents(int revt) {revents_ = revt;}
 
     //设置fd相应的事件状态
     void enableReading() {events_ |= kReadEvent; update();} //update()通知poller将事件添加到epoll

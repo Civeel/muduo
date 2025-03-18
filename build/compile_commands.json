@@ -1,20 +1,104 @@
 [
 {
   "directory": "/home/skeleton/桌面/muduo/build",
-  "command": "/usr/bin/c++ -Dmymuduo_EXPORTS   -g -std=c++11 -g -fPIC -o CMakeFiles/mymuduo.dir/Logger.cc.o -c /home/skeleton/桌面/muduo/Logger.cc",
+  "command": "/usr/bin/c++ -Dmymuduo_EXPORTS   -g -std=c++11 -fPIC -g -fPIC -o CMakeFiles/mymuduo.dir/Acceptor.cc.o -c /home/skeleton/桌面/muduo/Acceptor.cc",
+  "file": "/home/skeleton/桌面/muduo/Acceptor.cc",
+  "output": "CMakeFiles/mymuduo.dir/Acceptor.cc.o"
+},
+{
+  "directory": "/home/skeleton/桌面/muduo/build",
+  "command": "/usr/bin/c++ -Dmymuduo_EXPORTS   -g -std=c++11 -fPIC -g -fPIC -o CMakeFiles/mymuduo.dir/Buffer.cc.o -c /home/skeleton/桌面/muduo/Buffer.cc",
+  "file": "/home/skeleton/桌面/muduo/Buffer.cc",
+  "output": "CMakeFiles/mymuduo.dir/Buffer.cc.o"
+},
+{
+  "directory": "/home/skeleton/桌面/muduo/build",
+  "command": "/usr/bin/c++ -Dmymuduo_EXPORTS   -g -std=c++11 -fPIC -g -fPIC -o CMakeFiles/mymuduo.dir/Channel.cc.o -c /home/skeleton/桌面/muduo/Channel.cc",
+  "file": "/home/skeleton/桌面/muduo/Channel.cc",
+  "output": "CMakeFiles/mymuduo.dir/Channel.cc.o"
+},
+{
+  "directory": "/home/skeleton/桌面/muduo/build",
+  "command": "/usr/bin/c++ -Dmymuduo_EXPORTS   -g -std=c++11 -fPIC -g -fPIC -o CMakeFiles/mymuduo.dir/CurrentThread.cc.o -c /home/skeleton/桌面/muduo/CurrentThread.cc",
+  "file": "/home/skeleton/桌面/muduo/CurrentThread.cc",
+  "output": "CMakeFiles/mymuduo.dir/CurrentThread.cc.o"
+},
+{
+  "directory": "/home/skeleton/桌面/muduo/build",
+  "command": "/usr/bin/c++ -Dmymuduo_EXPORTS   -g -std=c++11 -fPIC -g -fPIC -o CMakeFiles/mymuduo.dir/DefaultPoller.cc.o -c /home/skeleton/桌面/muduo/DefaultPoller.cc",
+  "file": "/home/skeleton/桌面/muduo/DefaultPoller.cc",
+  "output": "CMakeFiles/mymuduo.dir/DefaultPoller.cc.o"
+},
+{
+  "directory": "/home/skeleton/桌面/muduo/build",
+  "command": "/usr/bin/c++ -Dmymuduo_EXPORTS   -g -std=c++11 -fPIC -g -fPIC -o CMakeFiles/mymuduo.dir/EPollPoller.cc.o -c /home/skeleton/桌面/muduo/EPollPoller.cc",
+  "file": "/home/skeleton/桌面/muduo/EPollPoller.cc",
+  "output": "CMakeFiles/mymuduo.dir/EPollPoller.cc.o"
+},
+{
+  "directory": "/home/skeleton/桌面/muduo/build",
+  "command": "/usr/bin/c++ -Dmymuduo_EXPORTS   -g -std=c++11 -fPIC -g -fPIC -o CMakeFiles/mymuduo.dir/EventLoop.cc.o -c /home/skeleton/桌面/muduo/EventLoop.cc",
+  "file": "/home/skeleton/桌面/muduo/EventLoop.cc",
+  "output": "CMakeFiles/mymuduo.dir/EventLoop.cc.o"
+},
+{
+  "directory": "/home/skeleton/桌面/muduo/build",
+  "command": "/usr/bin/c++ -Dmymuduo_EXPORTS   -g -std=c++11 -fPIC -g -fPIC -o CMakeFiles/mymuduo.dir/EventLoopThread.cc.o -c /home/skeleton/桌面/muduo/EventLoopThread.cc",
+  "file": "/home/skeleton/桌面/muduo/EventLoopThread.cc",
+  "output": "CMakeFiles/mymuduo.dir/EventLoopThread.cc.o"
+},
+{
+  "directory": "/home/skeleton/桌面/muduo/build",
+  "command": "/usr/bin/c++ -Dmymuduo_EXPORTS   -g -std=c++11 -fPIC -g -fPIC -o CMakeFiles/mymuduo.dir/EventLoopThreadPool.cc.o -c /home/skeleton/桌面/muduo/EventLoopThreadPool.cc",
+  "file": "/home/skeleton/桌面/muduo/EventLoopThreadPool.cc",
+  "output": "CMakeFiles/mymuduo.dir/EventLoopThreadPool.cc.o"
+},
+{
+  "directory": "/home/skeleton/桌面/muduo/build",
+  "command": "/usr/bin/c++ -Dmymuduo_EXPORTS   -g -std=c++11 -fPIC -g -fPIC -o CMakeFiles/mymuduo.dir/InetAddress.cpp.o -c /home/skeleton/桌面/muduo/InetAddress.cpp",
+  "file": "/home/skeleton/桌面/muduo/InetAddress.cpp",
+  "output": "CMakeFiles/mymuduo.dir/InetAddress.cpp.o"
+},
+{
+  "directory": "/home/skeleton/桌面/muduo/build",
+  "command": "/usr/bin/c++ -Dmymuduo_EXPORTS   -g -std=c++11 -fPIC -g -fPIC -o CMakeFiles/mymuduo.dir/Logger.cc.o -c /home/skeleton/桌面/muduo/Logger.cc",
   "file": "/home/skeleton/桌面/muduo/Logger.cc",
   "output": "CMakeFiles/mymuduo.dir/Logger.cc.o"
 },
 {
   "directory": "/home/skeleton/桌面/muduo/build",
-  "command": "/usr/bin/c++ -Dmymuduo_EXPORTS   -g -std=c++11 -g -fPIC -o CMakeFiles/mymuduo.dir/Timestamp.cc.o -c /home/skeleton/桌面/muduo/Timestamp.cc",
-  "file": "/home/skeleton/桌面/muduo/Timestamp.cc",
-  "output": "CMakeFiles/mymuduo.dir/Timestamp.cc.o"
+  "command": "/usr/bin/c++ -Dmymuduo_EXPORTS   -g -std=c++11 -fPIC -g -fPIC -o CMakeFiles/mymuduo.dir/Poller.cc.o -c /home/skeleton/桌面/muduo/Poller.cc",
+  "file": "/home/skeleton/桌面/muduo/Poller.cc",
+  "output": "CMakeFiles/mymuduo.dir/Poller.cc.o"
 },
 {
   "directory": "/home/skeleton/桌面/muduo/build",
-  "command": "/usr/bin/c++ -Dmymuduo_EXPORTS   -g -std=c++11 -g -fPIC -o CMakeFiles/mymuduo.dir/muduo_server.cpp.o -c /home/skeleton/桌面/muduo/muduo_server.cpp",
-  "file": "/home/skeleton/桌面/muduo/muduo_server.cpp",
-  "output": "CMakeFiles/mymuduo.dir/muduo_server.cpp.o"
+  "command": "/usr/bin/c++ -Dmymuduo_EXPORTS   -g -std=c++11 -fPIC -g -fPIC -o CMakeFiles/mymuduo.dir/Socket.cc.o -c /home/skeleton/桌面/muduo/Socket.cc",
+  "file": "/home/skeleton/桌面/muduo/Socket.cc",
+  "output": "CMakeFiles/mymuduo.dir/Socket.cc.o"
+},
+{
+  "directory": "/home/skeleton/桌面/muduo/build",
+  "command": "/usr/bin/c++ -Dmymuduo_EXPORTS   -g -std=c++11 -fPIC -g -fPIC -o CMakeFiles/mymuduo.dir/TcpConnection.cc.o -c /home/skeleton/桌面/muduo/TcpConnection.cc",
+  "file": "/home/skeleton/桌面/muduo/TcpConnection.cc",
+  "output": "CMakeFiles/mymuduo.dir/TcpConnection.cc.o"
+},
+{
+  "directory": "/home/skeleton/桌面/muduo/build",
+  "command": "/usr/bin/c++ -Dmymuduo_EXPORTS   -g -std=c++11 -fPIC -g -fPIC -o CMakeFiles/mymuduo.dir/TcpServer.cc.o -c /home/skeleton/桌面/muduo/TcpServer.cc",
+  "file": "/home/skeleton/桌面/muduo/TcpServer.cc",
+  "output": "CMakeFiles/mymuduo.dir/TcpServer.cc.o"
+},
+{
+  "directory": "/home/skeleton/桌面/muduo/build",
+  "command": "/usr/bin/c++ -Dmymuduo_EXPORTS   -g -std=c++11 -fPIC -g -fPIC -o CMakeFiles/mymuduo.dir/Thread.cc.o -c /home/skeleton/桌面/muduo/Thread.cc",
+  "file": "/home/skeleton/桌面/muduo/Thread.cc",
+  "output": "CMakeFiles/mymuduo.dir/Thread.cc.o"
+},
+{
+  "directory": "/home/skeleton/桌面/muduo/build",
+  "command": "/usr/bin/c++ -Dmymuduo_EXPORTS   -g -std=c++11 -fPIC -g -fPIC -o CMakeFiles/mymuduo.dir/Timestamp.cc.o -c /home/skeleton/桌面/muduo/Timestamp.cc",
+  "file": "/home/skeleton/桌面/muduo/Timestamp.cc",
+  "output": "CMakeFiles/mymuduo.dir/Timestamp.cc.o"
 }
 ]

@@ -13,7 +13,7 @@ Channel::Channel(EventLoop *loop, int fd)
 
 Channel::~Channel() {}
 
-//什么时候被调用
+//什么时候被调用?一个TcpConnection新连接创建的时候
 void Channel::tie(const std::shared_ptr<void> &obj) {
     tie_ = obj;
     tied_ = true;
@@ -23,12 +23,12 @@ void Channel::tie(const std::shared_ptr<void> &obj) {
 //ChannelLists通过EventLoop更改Poller中的事件
 void Channel::update() {
     //通过Channel所属的EventLoop，调用Poller的相应方法，注册fd的events
-    // loop_->updateChannel(this);
+    loop_->updateChannel(this);
 }
 
 //在Channel所属的EventLoop中，删除当前Channel
 void Channel::remove() {
-    // loop_->removeChannel(this);
+    loop_->removeChannel(this);
 }
 
 void Channel::handleEvent(Timestamp receiveTime) {
